@@ -28,7 +28,7 @@ import jgroove.jsonx.JsonCountry;
  * used out of there but if you want to complicate your life.
  * @author Aitor Ruano Miralles <0x077d@gmail.com>
  */
-@SuppressWarnings("null")
+
 public class JsonPost {
 
 
@@ -45,19 +45,19 @@ public class JsonPost {
 		JsonCountry jcountry = new JsonCountry();
 		//try {
 		//jcountry = JGroovex.getCountry();
-		CountryUtil c = new CountryUtil();
-		c.initCountryCode();
-		jcountry = c.getCountryCode();
+		//CountryUtil c = new CountryUtil();
+/*		c.initCountryCode();
+		jcountry = c.getCountryCode();*/
 		//} catch (IOException e) { //if error default country values
-		if (jcountry == null){
-			jcountry.IPR = "1201";
-			jcountry.ID = "223";
-			jcountry.CC1 = "0";
-			jcountry.CC2 = "0";
-			jcountry.CC3 = "0";
-			jcountry.CC4 = "2147483648";
+		//if (jcountry == null){
+		jcountry.IPR = "1201";
+		jcountry.ID = "223";
+		jcountry.CC1 = "0";
+		jcountry.CC2 = "0";
+		jcountry.CC3 = "0";
+		jcountry.CC4 = "2147483648";
 			//e.printStackTrace();
-		}
+		//}
 		country.put("ID", jcountry.ID);
 		country.put("CC1", jcountry.CC1);
 		country.put("CC2", jcountry.CC2);

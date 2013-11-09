@@ -9,7 +9,7 @@
  *     Aitor Ruano Miralles <0x077d@gmail.com> - initial API and implementation
  ******************************************************************************/
 package jgroove.json;
-import java.io.BufferedReader;
+/*import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -18,7 +18,7 @@ import java.net.MalformedURLException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import com.google.gson.Gson;
+import com.google.gson.Gson;*/
 
 import jgroove.jsonx.JsonCountry;
 
@@ -26,10 +26,10 @@ import jgroove.jsonx.JsonCountry;
 
 
 public class CountryUtil {
-	private static final String url = "http://grooveshark.com";
+/*	private static final String url = "http://grooveshark.com";*/
 	public static JsonCountry country;
 	
-	private static StringBuilder getHTML(){
+	/*private static StringBuilder getHTML(){
 
 		StringBuilder data = new StringBuilder("");
 		String line=null;
@@ -88,17 +88,19 @@ public class CountryUtil {
 		connection.disconnect();
 		return data;
 
-	}
+	}*/
 	
 	public void  initCountryCode(){
-		String json = (getHTML()).toString();
+		/*String json = getHTML()).toString();
 		int start = json.lastIndexOf("\"country\":{")+10;
 		int end = json.indexOf("},",start)+1;
 		
-		json = json.substring(start,end);
-		System.out.println("INIT->"+json);
-		country = new Gson().fromJson(json, JsonCountry.class);
-
+		json = json.substring(start,end);*/
+		//System.out.println("INIT->"+json);
+		//country = new Gson().fromJson(json, JsonCountry.class);
+		
+		country.ID = "221";
+		country.CC1 = country.CC2 = country.CC3 = country.CC4 = country.IPR = "0";
 	}
 	
 	public JsonCountry getCountryCode(){
