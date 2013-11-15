@@ -17,6 +17,10 @@ jGroove is a java api to interact with [Grooveshark](http://grooveshark.com/).
  ## Library Required
  
  [Google gson] (https://code.google.com/p/google-gson/)
+
+ ## How to compile (the easy way)
+ 
+ Install ant and use the build.xml file in src folder
  
  ## Example
  
